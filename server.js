@@ -41,7 +41,7 @@ var initDb = function(callback) {
   var mongodb = require('mongodb');
   if (mongodb == null) return;
 
-  mongodb.connect(mongoURL, function(err, conn) {
+  mongodb.connect("mongodb://admin:admin@ds117070.mlab.com:17070/transportapp", function(err, conn) {
     if (err) {
       callback(err);
       return;
